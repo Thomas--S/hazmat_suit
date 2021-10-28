@@ -1,10 +1,5 @@
 -- support for i18n
-local S = armor_i18n.gettext
-
-if not minetest.get_modpath("technic") then
-	minetest.log("warning", S("hazmat_suit: Mod loaded but unused."))
-	return
-end
+local S = armor.get_translator
 
 minetest.register_craftitem("hazmat_suit:helmet_hazmat", {
 		description = S("Hazmat Helmet"),
@@ -49,36 +44,36 @@ armor:register_armor("hazmat_suit:suit_hazmat", {
 minetest.register_craft({
 	output = "hazmat_suit:helmet_hazmat",
 	recipe = {
-		{"", "technic:stainless_steel_ingot", ""},
-		{"technic:stainless_steel_ingot", "default:glass", "technic:stainless_steel_ingot"},
-		{"technic:rubber", "technic:rubber", "technic:rubber"},
+		{"", "default:steel_ingot", ""},
+		{"default:steel_ingot", "default:glass", "default:steel_ingot"},
+		{"techage:vulcanized_rubber", "techage:vulcanized_rubber", "techage:vulcanized_rubber"},
 	},
 })
 
 minetest.register_craft({
 	output = "hazmat_suit:chestplate_hazmat",
 	recipe = {
-		{"technic:lead_ingot", "dye:yellow", "technic:lead_ingot"},
-		{"technic:stainless_steel_ingot", "technic:lead_ingot", "technic:stainless_steel_ingot"},
-		{"technic:lead_ingot", "technic:stainless_steel_ingot", "technic:lead_ingot"},
+		{"default:tin_ingot", "dye:yellow", "default:tin_ingot"},
+		{"default:steel_ingot", "default:tin_ingot", "default:steel_ingot"},
+		{"default:tin_ingot", "default:steel_ingot", "default:tin_ingot"},
 	},
 })
 
 minetest.register_craft({
 	output = "hazmat_suit:sleeve_hazmat",
 	recipe = {
-		{"technic:rubber", "dye:yellow"},
-		{"", "technic:stainless_steel_ingot"},
-		{"", "technic:rubber"},
+		{"techage:vulcanized_rubber", "dye:yellow"},
+		{"", "default:steel_ingot"},
+		{"", "techage:vulcanized_rubber"},
 	},
 })
 
 minetest.register_craft({
 	output = "hazmat_suit:leggings_hazmat",
 	recipe = {
-		{"technic:rubber", "technic:lead_ingot", "technic:rubber"},
-		{"technic:stainless_steel_ingot", "technic:rubber", "technic:stainless_steel_ingot"},
-		{"technic:lead_ingot", "", "technic:lead_ingot"},
+		{"techage:vulcanized_rubber", "default:tin_ingot", "techage:vulcanized_rubber"},
+		{"default:steel_ingot", "techage:vulcanized_rubber", "default:steel_ingot"},
+		{"default:tin_ingot", "", "default:tin_ingot"},
 	},
 })
 
@@ -86,8 +81,8 @@ minetest.register_craft({
 	output = "hazmat_suit:boots_hazmat",
 	recipe = {
 		{"", "", ""},
-		{"technic:rubber", "", "technic:rubber"},
-		{"technic:stainless_steel_ingot", "", "technic:stainless_steel_ingot"},
+		{"techage:vulcanized_rubber", "", "techage:vulcanized_rubber"},
+		{"default:steel_ingot", "", "default:steel_ingot"},
 	},
 })
 

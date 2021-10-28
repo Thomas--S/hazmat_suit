@@ -3,5 +3,7 @@
 
 License Source Code: Copyright (C) 2015-2018 Stuart Jones - LGPL v2.1
 
+The source code was modified by Thomas-S to fit the needs of the TechAge Survival Server.
+
 License Textures: HybridDog and numberZero - 2015-2017 WTFPL
 
